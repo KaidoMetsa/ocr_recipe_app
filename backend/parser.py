@@ -26,3 +26,8 @@ def parse_recipe(text: str) -> Dict[str, str]:
     m_ing = ING_RE.search(text + "\nvalmistamine:")
     if m_ing:
         out["ingredients"] = re.sub(r"\n{2,}", "\n", m_ing.group(2).strip())
+    m_steps = STEPS_RE.search(text)
+    if m_steps:
+        out["steps"] = re.sub(r"\n{2,}", "\n", m_steps.group(2).strip())
+
+    return out
