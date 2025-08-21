@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pillow
+easyocr
+openpyxl
+pydantic-settings
+python-dotenv
+
+
